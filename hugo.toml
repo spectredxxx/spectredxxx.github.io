@@ -1,1 +1,4 @@
+baseURL = 'https://spectredxxx.github.io/'
+languageCode = 'en-us'
+title = '随想录'
 theme = 'hugo-book'
