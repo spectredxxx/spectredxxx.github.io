@@ -148,7 +148,7 @@ body.book-kind-home .book-page {
   -webkit-backdrop-filter: blur(2px) !important;
 
   /* 边框也调得很淡 */
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border: none !important;
   color: #ffffff !important;
 
   /* 阴影和过渡 */
