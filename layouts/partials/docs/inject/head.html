@@ -1,0 +1,3 @@
+{{ range .Site.Params.BookCustomCSS }}
+  <link rel="stylesheet" href="{{ . | relURL }}">
+{{ end }}

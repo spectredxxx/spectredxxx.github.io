@@ -1,0 +1,227 @@
+/* 针对首页 (Kind=home) 的特殊处理：隐藏滚动条、Header、Footer */
+body.book-kind-home {
+  overflow: hidden !important;
+  /* 强制去除所有滚动条 */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 隐藏首页的各类导航栏和页脚 */
+body.book-kind-home .book-header,
+body.book-kind-home .book-menu,
+body.book-kind-home .book-footer {
+  display: none !important;
+}
+
+/* 确保内容容器没有内边距 */
+body.book-kind-home .book-page {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 首页 Hero 区域背景样式 */
+.book-hero {
+  /* 使用 100vw 和负 margin 强制背景图全宽，突破父容器限制 */
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+
+  /* 增加高度，使其占满全屏 */
+  min-height: 100vh !important;
+
+  /* 确保顶部没有间隙 */
+  margin-top: 0 !important;
+  top: 0 !important;
+
+  /* 背景图设置 */
+  background-color: #333333 !important;
+  background-image: url('/images/hero-bg.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+
+  position: relative !important;
+
+  /* Flex 布局居中内容 */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+
+  /* 字体颜色设为白色 */
+  color: #ffffff !important;
+  padding: 2rem !important;
+  /* 通过增加底部内边距，将视觉重心上移 */
+  padding-bottom: 20vh !important;
+  border-radius: 0 !important;
+  /* 全宽不需要圆角 */
+  margin-bottom: 0 !important;
+  /* 移除底部间距 */
+}
+
+/* 半透明遮罩层 - 提高文字可读性 */
+.book-hero::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)) !important;
+  /* 遮罩稍微调淡一点 */
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+/* 确保内容在遮罩层之上 */
+.book-hero>* {
+  position: relative !important;
+  z-index: 2 !important;
+  /* 稍微加一点文字阴影增强可读性 */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 标题样式增强 */
+.book-hero h1 {
+  font-size: 4rem !important;
+  /* 标题稍微放大 */
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  margin-bottom: 1.5rem !important;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* 副标题/段落样式增强 */
+.book-hero p {
+  font-size: 1.6rem !important;
+  font-weight: 300 !important;
+  letter-spacing: 1px !important;
+  line-height: 1.6 !important;
+  opacity: 0.9 !important;
+  max-width: 800px !important;
+  margin-bottom: 2rem !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  color: #f0f0f0 !important;
+}
+
+/* 
+   按钮容器和流光按钮样式 
+   - 增加间距
+   - 玻璃拟态效果 (非常透明)
+   - 流光动画
+*/
+.hero-buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 2rem !important;
+  /* 按钮之间的间距 */
+  margin-top: 3rem !important;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-buttons a {
+  /* 重置基础样式 */
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  /* 按钮形状和尺寸 */
+  padding: 1rem 3rem !important;
+  /* 稍微加宽 */
+  border-radius: 50px !important;
+  /* 胶囊圆角 */
+  font-size: 1.1rem !important;
+  font-weight: 400 !important;
+  /* 字体稍微细一点更优雅 */
+  letter-spacing: 2px !important;
+
+  /* 透明风格：降低背景透明度和模糊度 */
+  background: rgba(255, 255, 255, 0.03) !important;
+  /* 极低透明度 */
+  backdrop-filter: blur(2px) !important;
+  /* 轻微模糊 */
+  -webkit-backdrop-filter: blur(2px) !important;
+
+  /* 边框也调得很淡 */
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+
+  /* 阴影和过渡 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+  position: relative !important;
+  overflow: hidden !important;
+  /* 必须隐藏溢出的流光 */
+}
+
+/* 流光动画元素 */
+.hero-buttons a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  /* 倾斜的亮光条 */
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      /* 亮光稍微柔和一点 */
+      transparent);
+  transform: skewX(-25deg);
+  transition: none;
+  /* 默认不移动 */
+}
+
+/* 按钮 Hover 效果 */
+.hero-buttons a:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  /* hover 时稍微亮一点点 */
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Hover 时触发流光划过 */
+.hero-buttons a:hover::after {
+  animation: shine 0.75s ease-in-out;
+}
+
+/* 定义流光关键帧 */
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+/* 图片版权声明样式 */
+.hero-credit {
+  position: absolute !important;
+  bottom: 1.5rem !important;
+  right: 2rem !important;
+  font-size: 0.8rem !important;
+  opacity: 0.7 !important;
+  z-index: 10 !important;
+}
+
+.hero-credit a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+.hero-credit a:hover {
+  opacity: 1 !important;
+  border-bottom-style: solid;
+}
