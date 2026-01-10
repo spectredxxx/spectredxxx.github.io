@@ -1,0 +1,60 @@
+<div id="music-player" class="music-player">
+    <audio id="bgm-audio" loop>
+        <source src="/music/bgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="music-toggle" class="music-btn" title="播放/暂停背景音乐">
+        <svg id="music-icon-play" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+            fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+        <svg id="music-icon-pause" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+            fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pause"
+            style="display: none;">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+    </button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var audio = document.getElementById('bgm-audio');
+        var btn = document.getElementById('music-toggle');
+        var playIcon = document.getElementById('music-icon-play');
+        var pauseIcon = document.getElementById('music-icon-pause');
+
+        // 尝试恢复之前的播放状态（简单的 SessionStorage 实现）
+        // 注意：浏览器通常阻止自动播放，所以这可能需要用户交互一次后才生效，
+        // 或者我们默认设为暂停，让用户自己点。这里我们默认暂停。
+
+        var isPlaying = false;
+
+        btn.addEventListener('click', function () {
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+                playIcon.style.display = 'block';
+                pauseIcon.style.display = 'none';
+                btn.classList.remove('playing');
+            } else {
+                var playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(function () {
+                        isPlaying = true;
+                        playIcon.style.display = 'none';
+                        pauseIcon.style.display = 'block';
+                        btn.classList.add('playing');
+                    }).catch(function (error) {
+                        console.log("Play failed:", error);
+                    });
+                }
+            }
+        });
+
+        // 稍微调低点音量，不要太吵
+        audio.volume = 0.4;
+    });
+</script>

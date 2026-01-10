@@ -221,7 +221,49 @@ body.book-kind-home .book-page {
   transition: opacity 0.3s ease;
 }
 
-.hero-credit a:hover {
-  opacity: 1 !important;
-  border-bottom-style: solid;
+
+/* 
+   全局音乐播放器样式 
+   - 悬浮在左下角
+   - 玻璃拟态风格 
+*/
+.music-player {
+  position: fixed !important;
+  bottom: 2rem !important;
+  left: 2rem !important;
+  z-index: 1000 !important;
+}
+
+.music-btn {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  outline: none !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.music-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: scale(1.1) !important;
+}
+
+/* 播放时的旋转动画效果 */
+.music-btn.playing svg {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
