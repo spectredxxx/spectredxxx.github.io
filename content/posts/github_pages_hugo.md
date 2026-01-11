@@ -3,6 +3,7 @@ date: "2026-01-11"
 title: "博客自动化实战: Hugo + GitHub Actions"
 weight: "1"
 draft: false
+abstract: "本文深度解析如何结合 Hugo 的极速构建能力、GitHub Pages 的免费托管优势以及 GitHub Actions 的自动化部署特性，打造一套零成本、高性能、自动化的个人博客系统。内容涵盖从仓库创建、环境配置、主题安装到 CI/CD 流水线编写的完整实战指南，助你摆脱繁琐运维，专注于内容创作。"
 tags: ["Hugo", "GitHub Actions", "教程"]
 categories: ["技术分享"]
 cover: "https://images.unsplash.com/photo-1767194316686-e3ebed20c54a?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

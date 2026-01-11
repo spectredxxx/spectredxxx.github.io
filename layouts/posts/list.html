@@ -8,7 +8,11 @@
         <div>
             {{ partial "docs/post-meta" . }}
             <div class="book-post-content markdown-inner">
+                {{ if .Params.abstract }}
+                <p>{{ .Params.abstract | markdownify }}</p>
+                {{ else }}
                 <p>{{- .Summary | plainify | truncate 150 -}}</p>
+                {{ end }}
             </div>
         </div>
         {{- $thumbnail := default "thumbnail.*" .Params.BookPostThumbnail -}}
