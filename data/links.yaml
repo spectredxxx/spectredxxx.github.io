@@ -1,0 +1,17 @@
+- category: "AI Tools"
+  items:
+    - name: "ChatGPT"
+      url: "https://chat.openai.com"
+      desc: "OpenAI's powerful language model."
+    - name: "Claude"
+      url: "https://claude.ai"
+      desc: "Anthropic's helpful AI assistant."
+
+- category: "Development"
+  items:
+    - name: "GitHub"
+      url: "https://github.com"
+      desc: "Code hosting and collaboration."
+    - name: "Hugo"
+      url: "https://gohugo.io"
+      desc: "The world's fastest framework for building websites."

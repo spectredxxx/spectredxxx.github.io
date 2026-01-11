@@ -1,0 +1,24 @@
+{{ $links := .Site.Data.links }}
+{{ if $links }}
+<div class="links-container">
+    {{ range $links }}
+    <h2 class="links-category-title">{{ .category }}</h2>
+    <div class="links-grid">
+        {{ range .items }}
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="link-card">
+            <div class="link-card-header">
+                <img src="https://www.google.com/s2/favicons?domain={{ .url }}&sz=128" alt="{{ .name }}"
+                    class="link-icon">
+                <h3 class="link-title">{{ .name }}</h3>
+            </div>
+            <p class="link-desc">{{ .desc }}</p>
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+{{ else }}
+<div class="links-empty">
+    <p>暂无数据，请在 <code>data/links.yaml</code> 中添加内容。</p>
+</div>
+{{ end }}
