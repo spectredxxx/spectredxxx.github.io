@@ -267,16 +267,3 @@ body.book-kind-home .book-page {
     transform: rotate(360deg);
   }
 }
-
-/* 页面切换动画 (配合 Swup) */
-main {
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* 当页面正在切换离开时 */
-html.is-changing main {
-  opacity: 0;
-  transform: translateY(10px);
-}
