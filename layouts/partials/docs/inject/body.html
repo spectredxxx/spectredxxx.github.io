@@ -19,7 +19,18 @@
     </button>
 </div>
 
+<!-- 引入 Swup 实现无刷新页面切换，保持音乐播放 -->
+<script src="https://unpkg.com/swup@4"></script>
+<script src="https://unpkg.com/@swup/body-class-plugin@3"></script>
+
 <script>
+    // 初始化 Swup
+    // 确保 DOM 已经加载（或者脚本放在 body 底部）
+    const swup = new Swup({
+        containers: ["main"], // 只替换 main 内容，保留 body 其他部分（如音乐播放器）
+        plugins: [new SwupBodyClassPlugin()] // 自动更新 Body 的 class，保证 CSS 样式正确切换
+    });
+
     document.addEventListener('DOMContentLoaded', function () {
         var audio = document.getElementById('bgm-audio');
         var btn = document.getElementById('music-toggle');
