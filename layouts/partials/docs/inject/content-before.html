@@ -1,0 +1,8 @@
+{{ if .Params.cover }}
+<div class="post-cover">
+    <img src="{{ .Params.cover | relURL }}" alt="{{ .Title }}">
+    {{ if .Params.cover_credit }}
+    <div class="cover-credit">{{ .Params.cover_credit | markdownify }}</div>
+    {{ end }}
+</div>
+{{ end }}

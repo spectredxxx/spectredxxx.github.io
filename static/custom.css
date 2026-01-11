@@ -267,3 +267,49 @@ body.book-kind-home .book-page {
     transform: rotate(360deg);
   }
 }
+
+/* 页面切换动画 (配合 Swup) */
+main {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 当页面正在切换离开时 */
+html.is-changing main {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* 文章封面图样式 */
+.post-cover {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.post-cover img {
+  width: 100%;
+  max-height: 200px;
+  /* 减小高度，使其更像一个Banner */
+  object-fit: cover;
+  /* 保持比例填充 */
+  object-position: center;
+  /* 居中显示 */
+  border-radius: 8px;
+  /* 圆角稍微改小一点 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* 阴影也调淡一点 */
+}
+
+.cover-credit {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: right;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* 深色模式下的适配 */
+body.dark .cover-credit {
+  color: #aaa;
+}

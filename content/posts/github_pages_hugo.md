@@ -5,6 +5,8 @@ weight: "1"
 draft: false
 tags: ["Hugo", "GitHub Actions", "教程"]
 categories: ["技术分享"]
+cover: "https://images.unsplash.com/photo-1767194316686-e3ebed20c54a?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+cover_credit: "Photo by [robwingate](https://unsplash.com/photos/stone-railway-viaduct-in-a-moorland-landscape-at-dusk-r6gKMZQQZUs) on Unsplash"
 ---
 
 ## 💡 开篇：为什么你需要一个自动化博客？
