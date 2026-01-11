@@ -1,6 +1,6 @@
 ---
 date: "2026-01-11"
-title: "从零构建自动化博客：Hugo + GitHub Actions 实战指南"
+title: "博客自动化实战: Hugo + GitHub Actions"
 weight: "1"
 draft: false
 tags: ["Hugo", "GitHub Actions", "教程"]
