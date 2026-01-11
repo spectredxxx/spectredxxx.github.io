@@ -2,7 +2,7 @@
 {{ if $links }}
 <div class="links-container">
     {{ range $links }}
-    <h2 class="links-category-title">{{ .category }}</h2>
+    <h2 id="{{ .category | urlize }}" class="links-category-title">{{ .category }}</h2>
     <div class="links-grid">
         {{ range .items }}
         <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="link-card">

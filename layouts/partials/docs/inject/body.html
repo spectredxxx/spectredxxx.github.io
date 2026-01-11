@@ -26,7 +26,7 @@
 <script>
     // 初始化 Swup
     // 确保 DOM 已经加载（或者脚本放在 body 底部）
-    const swup = new Swup({
+    window.swup = new Swup({
         containers: ["main"], // 只替换 main 内容，保留 body 其他部分（如音乐播放器）
         plugins: [new SwupBodyClassPlugin()] // 自动更新 Body 的 class，保证 CSS 样式正确切换
     });
@@ -68,4 +68,84 @@
         // 稍微调低点音量，不要太吵
         audio.volume = 0.4;
     });
+
+    /* 
+     * 自动生成收藏页 (Links) 的目录 (TOC)
+     * 因为收藏页的标题是由 Shortcode 生成的 HTML，Hugo 默认的 TOC 无法识别。
+     * 这里使用 JS 动态扫描 .links-category-title 并注入到侧边栏目录中。
+     */
+    /* 
+     * 自动生成收藏页 (Links) 的目录 (TOC)
+     * 兼容 Swup 页面切换和 Hugo Book 主题结构
+     */
+    function generateLinkTOC() {
+        // 1. 找到所有由 links shortcode 生成的分类标题
+        const headers = document.querySelectorAll('.links-category-title');
+        if (headers.length === 0) return;
+
+        console.log("Found " + headers.length + " headers, generating TOC...");
+
+        // 2. 尝试找到 .book-toc 容器
+        let aside = document.querySelector('.book-toc');
+
+        // 如果容器不存在（因为 Markdown 没有原生标题，Hugo 可能没渲染它），我们需要手动创建
+        if (!aside) {
+            const mainContainer = document.querySelector('main.container');
+            if (mainContainer) {
+                aside = document.createElement('aside');
+                aside.className = 'book-toc'; // 保持主题样式类名
+
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'book-toc-content';
+                aside.appendChild(contentDiv);
+
+                // 将侧边栏插入到 main 容器的最后（通常位于 .book-page 之后）
+                mainContainer.appendChild(aside);
+            }
+        }
+
+        if (!aside) return;
+
+        // 3. 找到或创建 nav 元素
+        let nav = aside.querySelector('nav');
+        if (!nav) {
+            nav = document.createElement('nav');
+            nav.id = 'TableOfContents'; // Hugo 默认 TOC ID
+
+            // 确保插在 .book-toc-content 里面
+            const contentDiv = aside.querySelector('.book-toc-content') || aside;
+            contentDiv.appendChild(nav);
+        }
+
+        // 清空现有内容（防止重复和脏数据）
+        nav.innerHTML = '';
+
+        // 4. 生成目录列表
+        const ul = document.createElement('ul');
+
+        headers.forEach(header => {
+            // 确保每个标题都有 ID，作为锚点
+            if (!header.id) {
+                header.id = header.innerText.trim().toLowerCase().replace(/\s+/g, '-');
+            }
+
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#' + header.id;
+            a.textContent = header.innerText;
+
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
+
+        nav.appendChild(ul);
+    }
+
+    // 初始化运行
+    document.addEventListener('DOMContentLoaded', generateLinkTOC);
+
+    // 兼容 Swup：每次页面内容替换后重新运行
+    if (window.swup) {
+        window.swup.hooks.on('content:replace', generateLinkTOC);
+    }
 </script>
