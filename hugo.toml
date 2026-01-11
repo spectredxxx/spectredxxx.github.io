@@ -12,7 +12,7 @@ enableGitInfo = true
   # (Optional, default docs) Specify root page to render child pages as menu.
   # Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/
   # For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
-  BookSection = 'docs'
+  BookSection = '*'
 
   # (Optional, default light) Sets color theme: light, dark or auto.
   # Theme 'auto' switches between dark and light modes based on browser/os preferences
@@ -32,17 +32,7 @@ enableGitInfo = true
 [markup.highlight]
   style = 'base16-snazzy'
 
-# Menu configuration
-[menu]
-[[menu.after]]
-  name = '文档'
-  pageRef = '/docs/'
-  weight = 1
 
-[[menu.after]]
-  name = '博客'
-  pageRef = '/posts/'
-  weight = 2
 
 
 [caches]
