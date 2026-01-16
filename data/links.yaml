@@ -18,3 +18,9 @@
     - name: "Hugo"
       url: "https://gohugo.io"
       desc: "The world's fastest framework for building websites."
+
+- category: "AI Ready Tools"
+  items:
+    - name: "MinerU"
+      url: "https://mineru.net"
+      desc: "全能的文档解析神器"
