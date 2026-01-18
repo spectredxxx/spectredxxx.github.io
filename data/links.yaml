@@ -45,6 +45,9 @@
     - name: "Obsidian"
       url: "https://obsidian.md"
       desc: "Sharpen your thinking."
+    - name: "Models.dev"
+      url: "https://models.dev"
+      desc: "Models.dev is a comprehensive open-source database of AI model specifications, pricing, and features."
 
 - category: "Tools"
   items:
