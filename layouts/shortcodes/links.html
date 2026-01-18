@@ -2,19 +2,25 @@
 {{ if $links }}
 <div class="links-container">
     {{ range $links }}
-    <h2 id="{{ .category | urlize }}" class="links-category-title">{{ .category }}</h2>
-    <div class="links-grid">
-        {{ range .items }}
-        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="link-card">
-            <div class="link-card-header">
-                <img src="https://www.google.com/s2/favicons?domain={{ .url }}&sz=128" alt="{{ .name }}"
-                    class="link-icon">
-                <h3 class="link-title">{{ .name }}</h3>
-            </div>
-            <p class="link-desc">{{ .desc }}</p>
-        </a>
-        {{ end }}
-    </div>
+    <details class="links-category-details" open>
+        <summary class="links-category-summary">
+            <h2 id="{{ .category | urlize }}" class="links-category-title">
+                {{ .category }}
+            </h2>
+        </summary>
+        <div class="links-grid">
+            {{ range .items }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-card-header">
+                    <img src="https://www.google.com/s2/favicons?domain={{ .url }}&sz=128" alt="{{ .name }}"
+                        class="link-icon">
+                    <h3 class="link-title">{{ .name }}</h3>
+                </div>
+                <p class="link-desc">{{ .desc }}</p>
+            </a>
+            {{ end }}
+        </div>
+    </details>
     {{ end }}
 </div>
 {{ else }}

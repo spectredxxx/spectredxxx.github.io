@@ -411,3 +411,81 @@ body.dark .link-card {
   overflow: hidden;
   line-height: 1.4;
 }
+
+/* 
+   Links 页面特殊布局：仅隐藏右侧 TOC
+*/
+body.book-layout-links .book-toc {
+  display: none !important;
+}
+
+/* 如果需要让内容居中或占满 */
+body.book-layout-links .book-page {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+/* 
+   Collapsible Categories (Details/Summary)
+*/
+.links-category-details {
+  margin-bottom: 2rem;
+  border: none !important;
+  background: transparent !important;
+  padding-bottom: 0 !important;
+}
+
+/* 移除默认的三角箭头 */
+.links-category-summary {
+  cursor: pointer;
+  list-style: none !important;
+  list-style-type: none !important;
+  outline: none !important;
+  display: block !important;
+}
+
+.links-category-summary::-webkit-details-marker {
+  display: none !important;
+  content: "";
+}
+
+.links-category-summary::marker {
+  display: none !important;
+  content: "";
+}
+
+/* 覆盖 hugo-book 主题的 ::before 伪元素 (显示的 › 符号) */
+.links-category-summary::before {
+  display: none !important;
+  content: "" !important;
+}
+
+.links-category-title {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem !important;
+  /* 保持原有的上边距 */
+  margin-bottom: 1.5rem !important;
+  user-select: none;
+}
+
+
+
+/* 简单的淡入动画 */
+.links-category-details[open] .links-grid {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
