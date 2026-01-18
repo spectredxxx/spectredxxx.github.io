@@ -21,6 +21,12 @@
     - name: "Roadmap"
       url: "https://roadmap.sh"
       desc: "roadmap.sh is a community effort to create roadmaps, guides and other educational content to help guide developers in picking up a path and guide their learnings."
+    - name: "Prefect"
+      url: "https://www.prefect.io"
+      desc: "现代化的工作流编排平台，主要用于构建、运行和监控数据管道、机器学习工作流以及其他自动化任务"
+    - name: "Temporal"
+      url: "https://temporal.io"
+      desc: "Build durable AI agents and applications"
 
 - category: "AI Ready Tools"
   items:
