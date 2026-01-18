@@ -33,6 +33,9 @@
     - name: "MinerU"
       url: "https://mineru.net"
       desc: "全能的文档解析神器"
+    - name: "FastMCP"
+      url: "https://gofastmcp.com"
+      desc: "The fast, Pythonic way to build MCP servers and clients"
 
 - category: "Tools"
   items:
