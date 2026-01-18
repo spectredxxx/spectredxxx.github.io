@@ -18,6 +18,9 @@
     - name: "Hugo"
       url: "https://gohugo.io"
       desc: "The world's fastest framework for building websites."
+    - name: "Roadmap"
+      url: "https://roadmap.sh"
+      desc: "roadmap.sh is a community effort to create roadmaps, guides and other educational content to help guide developers in picking up a path and guide their learnings."
 
 - category: "AI Ready Tools"
   items:
