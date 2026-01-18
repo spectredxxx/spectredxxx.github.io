@@ -24,3 +24,9 @@
     - name: "MinerU"
       url: "https://mineru.net"
       desc: "全能的文档解析神器"
+
+- category: "Tools"
+  items:
+    - name: "Zlibrary"
+      url: "https://zlib.re"
+      desc: "世界上最大的电子图书馆"
