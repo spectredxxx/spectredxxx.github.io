@@ -1,4 +1,4 @@
-- category: "AI Tools"
+- category: "Conversational AI"
   items:
     - name: "ChatGPT"
       url: "https://chat.openai.com"
@@ -12,6 +12,12 @@
     - name: "Grok"
       url: "https://grok.com"
       desc: "xAI"
+
+- category: "Agent Development"
+  items:
+    - name: "Skills"
+      url: "https://skills.sh/"
+      desc: "The Open Agent Skills Ecosystem"
 
 - category: "Development"
   items:
