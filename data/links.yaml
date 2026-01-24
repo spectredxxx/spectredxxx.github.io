@@ -48,6 +48,9 @@
     - name: "Homebrew"
       url: "https://brew.sh"
       desc: "The Missing Package Manager for macOS (or Linux)"
+    - name: "Oh My ZSH"
+      url: "https://ohmyz.sh"
+      desc: "Unleash your terminal like never before."
 
 - category: "AI Ready Tools"
   items:
