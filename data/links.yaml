@@ -42,6 +42,12 @@
     - name: "LangChain"
       url: "https://www.langchain.com"
       desc: "Ship reliable agents"
+    - name: "Git"
+      url: "https://git-scm.com"
+      desc: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."
+    - name: "Homebrew"
+      url: "https://brew.sh"
+      desc: "The Missing Package Manager for macOS (or Linux)"
 
 - category: "AI Ready Tools"
   items:
