@@ -15,6 +15,18 @@
 
 - category: "Agent Development"
   items:
+    - name: "Claude Code"
+      url: "https://code.claude.com"
+      desc: "Go from prompt to production with Claude Code"
+    - name: "Codex"
+      url: "https://openai.com/codex"
+      desc: "One agent for everywhere you code. Powered by OpenAI’s frontier coding models and included in ChatGPT Plus, Pro, Business, Enterprise, and Edu."
+    - name: "Gemini Cli"
+      url: "https://geminicli.com"
+      desc: "Build  debug & deploy with AI"
+    - name: "OpenCode"
+      url: "https://opencode.ai"
+      desc: "The open source AI coding agent"
     - name: "Skills"
       url: "https://skills.sh/"
       desc: "The Open Agent Skills Ecosystem"
