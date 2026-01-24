@@ -64,6 +64,7 @@
       url: "https://ohmyz.sh"
       desc: "Unleash your terminal like never before."
 
+
 - category: "AI Ready Tools"
   items:
     - name: "MinerU"
@@ -76,8 +77,15 @@
       url: "https://models.dev"
       desc: "Models.dev is a comprehensive open-source database of AI model specifications, pricing, and features."
 
+- category: "Development Env"
+  items:
+    - name: "pyenv"
+      url: "https://github.com/pyenv/pyenv"
+      desc: "Simple Python Version Management"
+
 - category: "Tools"
   items:
     - name: "Zlibrary"
       url: "https://zlib.re"
       desc: "世界上最大的电子图书馆"
+
