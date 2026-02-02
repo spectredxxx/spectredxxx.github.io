@@ -12,6 +12,12 @@
     - name: "Grok"
       url: "https://grok.com"
       desc: "xAI"
+    - name: "DeepSeek"
+      url: "https://www.deepseek.com"
+      desc: "探索未至之境"
+    - name: "智谱清言"
+      url: "https://chatglm.cn/"
+      desc: "智谱清言"
 
 - category: "Agent Development"
   items:
