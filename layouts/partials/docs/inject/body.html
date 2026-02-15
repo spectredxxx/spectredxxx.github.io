@@ -17,6 +17,17 @@
             <rect x="14" y="4" width="4" height="16"></rect>
         </svg>
     </button>
+    <button id="fullscreen-toggle" class="music-btn" title="全屏/退出全屏 (隐藏侧边栏)">
+        <svg id="icon-maximize" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+            fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+        <svg id="icon-minimize" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+            fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"
+            style="display: none;">
+            <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>
+        </svg>
+    </button>
 </div>
 
 <!-- 引入 Swup 实现无刷新页面切换，保持音乐播放 -->
@@ -67,6 +78,59 @@
 
         // 稍微调低点音量，不要太吵
         audio.volume = 0.4;
+
+        // --- 全屏按钮逻辑 ---
+        var fsBtn = document.getElementById('fullscreen-toggle');
+        var maxIcon = document.getElementById('icon-maximize');
+        var minIcon = document.getElementById('icon-minimize');
+
+        function updateFullscreenIcons(isFull) {
+             if (isFull) {
+                maxIcon.style.display = 'none';
+                minIcon.style.display = 'block';
+            } else {
+                maxIcon.style.display = 'block';
+                minIcon.style.display = 'none';
+            }
+        }
+
+        function toggleFullscreenMode() {
+            console.log("Toggling fullscreen mode...");
+            document.body.classList.toggle('fullscreen-mode');
+            var isFull = document.body.classList.contains('fullscreen-mode');
+            console.log("Body has fullscreen-mode:", isFull);
+            
+            // 保存状态
+            sessionStorage.setItem('fullscreen-mode', isFull);
+            updateFullscreenIcons(isFull);
+        }
+
+        // 恢复状态
+        var savedState = sessionStorage.getItem('fullscreen-mode');
+        if (savedState === 'true') {
+            document.body.classList.add('fullscreen-mode');
+            updateFullscreenIcons(true);
+        }
+
+        if(fsBtn) {
+            fsBtn.addEventListener('click', toggleFullscreenMode);
+        }
+
+        // 兼容 Swup：因为 SwupBodyClassPlugin 可能会重置 body 的 class，
+        // 所以每次页面切换后，我们要强制把 fullscreen-mode 加回去（如果本来也是开启的话）。
+        if (window.swup) {
+            // 使用 animation:in:end 或者稍后一点的 hook，确保在 body class 插件运行之后
+            window.swup.hooks.on('content:replace', function() {
+                setTimeout(function() {
+                    var savedState = sessionStorage.getItem('fullscreen-mode');
+                    if (savedState === 'true') {
+                        console.log("Restoring fullscreen-mode after swup navigation");
+                        document.body.classList.add('fullscreen-mode');
+                        updateFullscreenIcons(true);
+                    }
+                }, 100); // 100ms 延迟确保覆盖插件的行为
+            });
+        }
     });
 
     /* 

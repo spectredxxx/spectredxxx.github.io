@@ -223,15 +223,18 @@ body.book-kind-home .book-page {
 
 
 /* 
-   全局音乐播放器样式 
+   全局音乐播放器 + 全屏按钮样式 
    - 悬浮在左下角
    - 玻璃拟态风格 
+   - Flex 布局横向排列
 */
 .music-player {
   position: fixed !important;
   bottom: 2rem !important;
   left: 2rem !important;
   z-index: 1000 !important;
+  display: flex;
+  gap: 10px; /* 按钮之间的间距 */
 }
 
 .music-btn {
@@ -257,9 +260,9 @@ body.book-kind-home .book-page {
   transform: scale(1.1) !important;
 }
 
-/* 播放时的旋转动画效果 */
-.music-btn.playing svg {
-  animation: spin 3s linear infinite;
+/* 播放时的旋转动画效果 - 仅对 SVG 旋转 */
+#music-toggle.playing svg {
+   animation: spin 3s linear infinite;
 }
 
 @keyframes spin {
@@ -267,6 +270,57 @@ body.book-kind-home .book-page {
     transform: rotate(360deg);
   }
 }
+
+/* 
+   全屏模式 (Fullscreen Mode) 样式
+   当 body 拥有 .fullscreen-mode 类时生效
+*/
+
+/* 1. 强制放开容器宽度限制 */
+body.fullscreen-mode .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important; /* 视情况而定，有些主题需要一点 padding */
+}
+
+/* 2. 隐藏左右侧边栏 - 及其内部的所有 fixed 内容 */
+body.fullscreen-mode .book-menu,
+body.fullscreen-mode .book-toc,
+body.fullscreen-mode .book-menu-content,
+body.fullscreen-mode .book-toc-content {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    flex: 0 0 0 !important; 
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    position: static !important; /* 强制取消 fixed */
+    z-index: -1 !important;
+}
+
+/* 3. 让中间主要内容占满全宽 */
+body.fullscreen-mode .book-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important; /*防止被压缩*/
+    margin: 0 auto !important;
+    padding: 2rem 4rem !important; /* 增加内边距，阅读体验更好 */
+    flex: 1 1 auto !important; /* 关键：让它占据剩余空间 */
+    float: none !important;
+}
+
+
+/* 主题原本可能用 flex 或 grid 布局，在这里需要覆盖 */
+body.fullscreen-mode main {
+    display: flex !important; /* 保持 flex */
+    flex-direction: row !important;
+    width: 100% !important;
+}
+
 
 /* 页面切换动画 (配合 Swup) */
 main {
