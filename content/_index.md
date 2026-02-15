@@ -5,7 +5,7 @@ layout: landing
 
 <div class="book-hero">
 
-# 随想录 {anchor=false}
+# 曜风 {anchor=false}
 「心如花木，向阳而生」
 
 <div class="hero-buttons">
