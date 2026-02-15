@@ -123,6 +123,8 @@ GitHub Actions (`.github/workflows/hugo.yaml`) 自动化部署:
 
 ## 开发注意事项
 
+- 不要执行任何 git 操作
+
 ### 主题自定义
 1. **布局覆盖**: 在 `layouts/` 目录创建与主题相同的路径结构可覆盖模板
 2. **资源覆盖**: `assets/` 中的文件会覆盖主题的 `assets/` 文件
