@@ -21,6 +21,9 @@
     - name: "Minimax"
       url: "https://www.minimax.io/"
       desc: "Intelligence with Everyone / 海螺AI"
+    - name: "Kimi"
+      url: "https://www.kimi.com/"
+      desc: "Kimi 智能助手 / Moonshot AI"
 
 - category: "Agent Development"
   items:
