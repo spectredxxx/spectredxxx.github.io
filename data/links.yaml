@@ -24,6 +24,9 @@
     - name: "Kimi"
       url: "https://www.kimi.com/"
       desc: "Kimi 智能助手 / Moonshot AI"
+    - name: "Qwen"
+      url: "https://chat.qwen.ai/"
+      desc: "通义千问 / Alibaba Cloud"
 
 - category: "Agent Development"
   items:
