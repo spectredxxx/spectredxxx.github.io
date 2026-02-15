@@ -130,7 +130,7 @@ baseURL = 'https://spectredxxx.github.io/'
 languageCode = 'zh-cn'
 
 # 网站标题
-title = '随想录'
+title = '曜风'
 
 # 启用主题（稍后配置）
 theme = 'hugo-book'

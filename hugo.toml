@@ -1,6 +1,6 @@
 baseURL = 'https://spectredxxx.github.io/'
 languageCode = 'zh-cn'
-title = '随想录'
+title = '曜风'
 theme = 'hugo-book'
 
 # Book configuration
