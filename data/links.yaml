@@ -27,6 +27,9 @@
     - name: "Qwen"
       url: "https://chat.qwen.ai/"
       desc: "通义千问 / Alibaba Cloud"
+    - name: "Doubao"
+      url: "https://www.doubao.com/"
+      desc: "豆包 / ByteDance"
 
 - category: "Agent Development"
   items:
