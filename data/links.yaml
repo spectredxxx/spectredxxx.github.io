@@ -18,6 +18,9 @@
     - name: "智谱清言"
       url: "https://chatglm.cn/"
       desc: "智谱清言"
+    - name: "Minimax"
+      url: "https://www.minimax.io/"
+      desc: "Intelligence with Everyone / 海螺AI"
 
 - category: "Agent Development"
   items:
