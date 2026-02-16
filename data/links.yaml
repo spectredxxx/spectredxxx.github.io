@@ -87,6 +87,9 @@
     - name: "Oh My ZSH"
       url: "https://ohmyz.sh"
       desc: "Unleash your terminal like never before."
+    - name: "APILayer"
+      url: "https://apilayer.com/"
+      desc: "API marketplace for discovering, integrating and building powerful APIs"
 
 
 - category: "AI Ready Tools"
@@ -118,4 +121,7 @@
     - name: "cheat.sh"
       url: "https://cheat.sh/"
       desc: "Unified access to the best community driven cheat sheets"
+    - name: "The Book of Secret Knowledge"
+      url: "https://github.com/trimstray/the-book-of-secret-knowledge"
+      desc: "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more."
 
