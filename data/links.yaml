@@ -112,4 +112,7 @@
     - name: "Zlibrary"
       url: "https://zlib.re"
       desc: "世界上最大的电子图书馆"
+    - name: "cheat.sh"
+      url: "https://cheat.sh/"
+      desc: "Unified access to the best community driven cheat sheets"
 
