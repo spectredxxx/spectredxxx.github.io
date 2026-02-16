@@ -90,6 +90,9 @@
     - name: "APILayer"
       url: "https://apilayer.com/"
       desc: "API marketplace for discovering, integrating and building powerful APIs"
+    - name: "Tech Interview Handbook"
+      url: "https://www.techinterviewhandbook.org/"
+      desc: "Free curated interview preparation materials for busy engineers. Used by over 1,000,000 engineers."
 
 
 - category: "AI Ready Tools"
