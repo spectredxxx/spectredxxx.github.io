@@ -225,39 +225,122 @@ body.book-kind-home .book-page {
 /* 
    全局音乐播放器 + 全屏按钮样式 
    - 悬浮在左下角
-   - 玻璃拟态风格 
-   - Flex 布局横向排列
+   - 扇形展开菜单 (Fan Menu)
 */
 .music-player {
   position: fixed !important;
   bottom: 2rem !important;
   left: 2rem !important;
   z-index: 1000 !important;
-  display: flex;
-  gap: 10px; /* 按钮之间的间距 */
+  width: 45px; /* 限制容器大小，使其作为定位基准 */
+  height: 45px;
 }
 
+/* 扇形背景区 (Visual Fan Background) */
+.music-player::before {
+  content: '';
+  position: absolute;
+  /* 定位到按钮中心 (45px/2 = 22.5px) */
+  bottom: 22.5px; 
+  left: 22.5px;
+  
+  width: 140px; 
+  height: 140px;
+  
+  /* 制作扇形：通过右上角大圆角实现 */
+  border-radius: 0 140px 0 0; 
+  
+  /* 样式升级：清透渐变玻璃 (Premium Frosted Glass) */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  /* 边缘高光：只显示弧形边的边框 */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: none;
+  border-bottom: none;
+  
+  /* 柔和阴影，增加层次感 */
+  box-shadow: 10px -10px 30px rgba(0, 0, 0, 0.15);
+  
+  z-index: 0; /* 在按钮之下 */
+  
+  /* 动画设置 */
+  transform-origin: 0% 100%; /* 以左下角为原点展开 */
+  transform: scale(0);
+  opacity: 0;
+  
+  /* 使用弹性缓动 (Elastic Easing) 让展开更有趣 */
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.music-player:hover::before {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 通用按钮样式 */
 .music-btn {
   width: 45px !important;
   height: 45px !important;
   border-radius: 50% !important;
+  
+  /* 玻璃拟态背景 */
   background: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(5px) !important;
   -webkit-backdrop-filter: blur(5px) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  
   color: #ffffff !important;
   cursor: pointer !important;
   display: flex !important;
-  align-items: center !important;
+  align-items: center;
   justify-content: center !important;
   outline: none !important;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
-  transition: all 0.3s ease !important;
+  
+  /* 绝对定位，初始都重叠在左下角 */
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; /* Bouncy effect */
 }
 
 .music-btn:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  transform: scale(1.1) !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  /* 避免 transform 覆盖位移，只改变亮度 */
+  filter: brightness(1.2); 
+}
+
+/* 主按钮 (Play/Pause) - 永远在最上层 */
+#music-toggle {
+  z-index: 20;
+}
+
+/* 全屏按钮 - 作为扇形菜单的一项 */
+#fullscreen-toggle {
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5) rotate(-45deg); /* 初始缩小并旋转 */
+  
+  /* 关闭时的延迟，防止鼠标滑过缝隙时菜单消失 */
+  transition-delay: 0.2s; 
+}
+
+/* Hover 触发状态 */
+.music-player:hover #fullscreen-toggle {
+  opacity: 1;
+  pointer-events: auto;
+  
+  /* 移动到 45度角位置
+     x = 50px, y = -50px
+  */
+  transform: translate(55px, -55px) scale(1) rotate(0deg);
+  transition-delay: 0s;
 }
 
 /* 播放时的旋转动画效果 - 仅对 SVG 旋转 */
