@@ -136,4 +136,10 @@
     - name: "The Book of Secret Knowledge"
       url: "https://github.com/trimstray/the-book-of-secret-knowledge"
       desc: "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more."
+    - name: "Transform"
+      url: "https://transform.tools/"
+      desc: "多格式在线转换工具，支持 JSON、HTML、SVG、CSS、TypeScript 等互转"
+    - name: "Cobalt"
+      url: "https://cobalt.tools/"
+      desc: "无广告、无追踪的媒体下载工具，粘贴链接即可保存你喜欢的内容"
 
