@@ -250,18 +250,14 @@ body.book-kind-home .book-page {
   /* 制作扇形：通过右上角大圆角实现 */
   border-radius: 0 140px 0 0; 
   
-  /* 样式升级：清透渐变玻璃 (Premium Frosted Glass) */
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  /* 隐形背景 - 仅用于维持鼠标悬浮交互 (Invisible Interactive Area) */
+  background: transparent;
   
-  /* 边缘高光：只显示弧形边的边框 */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: none;
-  border-bottom: none;
-  
-  /* 柔和阴影，增加层次感 */
-  box-shadow: 10px -10px 30px rgba(0, 0, 0, 0.15);
+  /* 移除视觉装饰 */
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   
   z-index: 0; /* 在按钮之下 */
   
