@@ -87,6 +87,12 @@
     - name: "APILayer"
       url: "https://apilayer.com/"
       desc: "API marketplace for discovering, integrating and building powerful APIs"
+    - name: "Convex"
+      url: "https://www.convex.dev/"
+      desc: "The backend platform that keeps your app in sync. 全栈后端开发平台"
+    - name: "Apache Spark"
+      url: "https://spark.apache.org/"
+      desc: "Unified engine for large-scale data analytics. 大规模数据处理与分析引擎"
 
 
 - category: "AI Ready Tools"
@@ -110,6 +116,9 @@
     - name: "pyenv"
       url: "https://github.com/pyenv/pyenv"
       desc: "Simple Python Version Management"
+    - name: "iTerm2"
+      url: "https://iterm2.com/"
+      desc: "macOS Terminal Replacement. GPU 加速的终端模拟器"
 
 - category: "Learning Resources"
   items:
@@ -131,6 +140,12 @@
     - name: "cheat.sh"
       url: "https://cheat.sh/"
       desc: "Unified access to the best community driven cheat sheets"
+    - name: "Awesome Database Learning"
+      url: "https://github.com/pingcap/awesome-database-learning"
+      desc: "PingCAP 整理的数据库学习资料合集，涵盖论文、课程和实践指南"
+    - name: "Microsoft Excel Help"
+      url: "https://support.microsoft.com/zh-cn/excel"
+      desc: "Microsoft Excel 官方帮助与学习资源"
 
 - category: "Tools"
   items:
@@ -149,4 +164,7 @@
     - name: "Cobalt"
       url: "https://cobalt.tools/"
       desc: "无广告、无追踪的媒体下载工具，粘贴链接即可保存你喜欢的内容"
+    - name: "Emojipedia"
+      url: "https://emojipedia.org/"
+      desc: "Emoji 百科全书，查找、复制和了解每个 emoji 的含义"
 
