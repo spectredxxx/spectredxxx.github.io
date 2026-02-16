@@ -97,6 +97,9 @@
     - name: "Models.dev"
       url: "https://models.dev"
       desc: "Models.dev is a comprehensive open-source database of AI model specifications, pricing, and features."
+    - name: "Hugging Face"
+      url: "https://huggingface.co/"
+      desc: "The AI community building the future. Models, Datasets & Spaces."
 
 - category: "Development Env"
   items:
