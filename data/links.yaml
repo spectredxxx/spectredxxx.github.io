@@ -93,6 +93,9 @@
     - name: "Apache Spark"
       url: "https://spark.apache.org/"
       desc: "Unified engine for large-scale data analytics. 大规模数据处理与分析引擎"
+    - name: "21st.dev"
+      url: "https://21st.dev/"
+      desc: "高质量 React 组件社区，探索、复制和混搭数千个由设计师和开发者发布的 UI 组件"
 
 
 - category: "AI Ready Tools"
@@ -119,6 +122,12 @@
     - name: "iTerm2"
       url: "https://iterm2.com/"
       desc: "macOS Terminal Replacement. GPU 加速的终端模拟器"
+    - name: "Ghostty"
+      url: "https://ghostty.org/"
+      desc: "Fast, native, feature-rich terminal emulator pushing modern features"
+    - name: "VS Code"
+      url: "https://code.visualstudio.com/"
+      desc: "Free, lightweight yet powerful source code editor by Microsoft"
 
 - category: "Learning Resources"
   items:
