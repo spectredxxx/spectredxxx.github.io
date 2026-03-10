@@ -90,6 +90,9 @@
     - name: "Spec Kit"
       url: "https://github.github.com/spec-kit/"
       desc: "GitHub's Spec-Driven Development toolkit. 通过规格说明驱动开发，实现高质量软件的快速构建"
+    - name: "Tavily"
+      url: "https://app.tavily.com/"
+      desc: "The AI search engine optimized for LLMs and RAG"
 
 - category: "Platforms & Communities"
   items:
