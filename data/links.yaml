@@ -192,6 +192,9 @@
     - name: "Transform"
       url: "https://transform.tools/"
       desc: "多格式在线转换工具，支持 JSON、HTML、SVG、CSS、TypeScript 等互转"
+    - name: "tv.garden"
+      url: "https://tv.garden/"
+      desc: "Watch free live world TV from anywhere. 无需注册登录、无广告的全球电视直播平台"
 
 - category: "Learning & Books"
   items:
