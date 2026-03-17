@@ -33,6 +33,9 @@
 
 - category: "AI Coding Agents"
   items:
+    - name: "pi"
+      url: "https://pi.dev"
+      desc: "Minimal terminal coding agent. Extensible via TypeScript skills, extensions, and packages."
     - name: "Claude Code"
       url: "https://code.claude.com"
       desc: "Go from prompt to production with Claude Code"
