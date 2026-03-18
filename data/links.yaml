@@ -117,9 +117,9 @@
     - name: "APILayer"
       url: "https://apilayer.com/"
       desc: "API marketplace for discovering, integrating and building powerful APIs"
-    - name: "Tweet by trq212"
+    - name: "trq212 on X"
       url: "https://x.com/trq212/status/2033949937936085378"
-      desc: "Tweet on X (Twitter) by user trq212"
+      desc: "Status update by trq212 on X (Twitter)"
 
 - category: "Frameworks & Libraries"
   items:
