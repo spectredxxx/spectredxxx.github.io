@@ -120,6 +120,9 @@
 
 - category: "Frameworks & Libraries"
   items:
+    - name: "Apache Hive"
+      url: "https://hive.apache.org"
+      desc: "Data warehouse software for reading, writing and managing large datasets. 基于 Hadoop 的数据仓库与 SQL 查询引擎"
     - name: "Apache Spark"
       url: "https://spark.apache.org/"
       desc: "Unified engine for large-scale data analytics. 大规模数据处理与分析引擎"
