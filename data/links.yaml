@@ -57,6 +57,9 @@
     - name: "Taskmaster AI"
       url: "https://www.task-master.dev/"
       desc: "The PM for your AI agent. 将复杂项目拆解为 AI Agent 可执行的任务"
+    - name: "Claude Code in Action"
+      url: "https://anthropic.skilljar.com/claude-code-in-action"
+      desc: "Official course by Anthropic for learning Claude Code"
 
 - category: "AI Platforms & Frameworks"
   items:
