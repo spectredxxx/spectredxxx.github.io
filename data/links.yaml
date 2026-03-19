@@ -165,6 +165,9 @@
     - name: "Unirest-Java"
       url: "https://kong.github.io/unirest-java/"
       desc: "Lightweight HTTP client library for Java by Kong. 轻量级 Java HTTP 客户端"
+    - name: "DagWorks"
+      url: "https://www.dagworks.io"
+      desc: "Building modern data infrastructure with Dask, Fugue, and other open-source tools"
 
 - category: "Development Environment"
   items:
