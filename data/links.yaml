@@ -60,6 +60,9 @@
     - name: "Claude Code in Action"
       url: "https://anthropic.skilljar.com/claude-code-in-action"
       desc: "Official course by Anthropic for learning Claude Code"
+    - name: "Claude Code 中文文档"
+      url: "https://code.claude.com/docs/zh-CN/"
+      desc: "Anthropic官方Claude Code工具的中文官方文档"
 
 - category: "AI Platforms & Frameworks"
   items:
