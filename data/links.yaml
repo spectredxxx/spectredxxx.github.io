@@ -243,6 +243,9 @@
 
 - category: "Learning & Books"
   items:
+    - name: "The Complete Guide to Building Skills for Claude"
+      url: "https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf"
+      desc: "Anthropic 官方 Claude Skills 构建完整指南"
     - name: "Anna's Archive"
       url: "https://zh.annas-archive.li/"
       desc: "全人类的开放图书馆，搜索引擎聚合多个影子图书馆资源"
