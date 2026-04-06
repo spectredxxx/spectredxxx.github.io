@@ -315,3 +315,6 @@
     - name: "Zlibrary"
       url: "https://zlib.re"
       desc: "世界上最大的电子图书馆"
+    - name: "PMF rame.works"
+      url: "https://pmframe.works"
+      desc: "100 个产品设计框架，从用户洞察到系统思维，覆盖产品全链路的核心工具集"
