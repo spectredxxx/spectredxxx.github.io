@@ -75,6 +75,9 @@
 
 - category: "AI Platforms & Frameworks"
   items:
+    - name: "Dokobot"
+      url: "https://dokobot.ai/zh-CN"
+      desc: "免费无限制的 AI Agent 网页浏览工具。真实浏览器渲染，输出 LLM 就绪文本，支持本地或云端 API，多浏览器并行"
     - name: "AGENTS.md"
       url: "https://agents.md/"
       desc: "A simple, open format for guiding coding agents. 编码代理的开放指引规范"
