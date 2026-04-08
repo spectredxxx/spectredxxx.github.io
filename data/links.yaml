@@ -78,6 +78,9 @@
 
 - category: "AI Platforms & Frameworks"
   items:
+    - name: "Hermes Agent Orange Book"
+      url: "https://github.com/alchaincyf/hermes-agent-orange-book/"
+      desc: "橙皮书系列，Nous Research 开源 AI Agent 框架 Hermes Agent 实战指南"
     - name: "Dokobot"
       url: "https://dokobot.ai/zh-CN"
       desc: "免费无限制的 AI Agent 网页浏览工具。真实浏览器渲染，输出 LLM 就绪文本，支持本地或云端 API，多浏览器并行"
