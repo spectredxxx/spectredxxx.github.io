@@ -78,6 +78,9 @@
 
 - category: "AI Platforms & Frameworks"
   items:
+    - name: "Browser Use"
+      url: "https://browser-use.com"
+      desc: "Agents at scale. Undetectable browsers. The API for any website."
     - name: "Nous Research"
       url: "https://nousresearch.com/"
       desc: "美国开源 AI 运动的领导者，训练世界级开源语言模型并构建分布式无偏见训练基础设施"
