@@ -252,6 +252,9 @@
 
 - category: "Online Tools"
   items:
+    - name: "飞搜"
+      url: "https://feisou.app"
+      desc: "飞书云文档搜索引擎，搜索全网公开飞书云文档，AI 精准推荐，按知识库聚合展示"
     - name: "Cobalt"
       url: "https://cobalt.tools/"
       desc: "无广告、无追踪的媒体下载工具，粘贴链接即可保存你喜欢的内容"
