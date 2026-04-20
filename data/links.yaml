@@ -150,6 +150,9 @@
     - name: "Tavily"
       url: "https://app.tavily.com/"
       desc: "The AI search engine optimized for LLMs and RAG"
+    - name: "Multica"
+      url: "https://github.com/multica-ai/multica"
+      desc: "开源 AI Agent 管理平台，将编码代理变成真正的队友。支持 Claude Code、Codex、OpenClaw、OpenCode、Hermes、Gemini、Pi、Cursor Agent，提供任务分配、进度跟踪、技能复用等功能"
 
 - category: "Platforms & Communities"
   items:
