@@ -357,3 +357,6 @@
     - name: "PMF rame.works"
       url: "https://pmframe.works"
       desc: "100 个产品设计框架，从用户洞察到系统思维，覆盖产品全链路的核心工具集"
+    - name: "Claude Code 知识库"
+      url: "https://ucnxvqkuej4g.feishu.cn/wiki/space/7622979751321341108"
+      desc: "Claude Code 完整知识库，包含从快速上手到高级功能的 13 章教程，以及源码解析、提示词合集等深度内容"
