@@ -294,6 +294,9 @@
     - name: "Hysteria 2"
       url: "https://v2.hysteria.network/zh/"
       desc: "功能丰富的高性能代理网络，中文官方文档"
+    - name: "Pockyt"
+      url: "https://shop.pockyt.io/"
+      desc: "礼品卡购物平台，提供游戏、餐饮、娱乐、购物、旅游等多种礼品卡"
 
 - category: "Learning & Books"
   items:
