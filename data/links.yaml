@@ -78,6 +78,9 @@
 
 - category: "AI Platforms & Frameworks"
   items:
+    - name: "Hello Agents"
+      url: "https://hello-agents.datawhale.cc"
+      desc: "Datawhale 的 AI Agent 学习/实践手册与资源入口。"
     - name: "Browser Use"
       url: "https://browser-use.com"
       desc: "Agents at scale. Undetectable browsers. The API for any website."
