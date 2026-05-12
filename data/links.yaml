@@ -378,3 +378,6 @@
     - name: "Claude Code 知识库"
       url: "https://ucnxvqkuej4g.feishu.cn/wiki/space/7622979751321341108"
       desc: "Claude Code 完整知识库，包含从快速上手到高级功能的 13 章教程，以及源码解析、提示词合集等深度内容"
+    - name: "现代数据工程生态的层级地图"
+      url: "https://research.frankk.site/modern-data-stack"
+      desc: "按数据源 / 集成 / 处理 / 存储 / 查询 / 应用六层,把当前主流数据栈里的 16 个开源与商业项目逐个拆开,讲清发展、设计、用户与典型用法"
