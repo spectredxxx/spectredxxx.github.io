@@ -324,6 +324,9 @@
     - name: "Google Code Wiki"
       url: "https://codewiki.google/"
       desc: "Google 开发者代码维基，提供 Google 技术文档与最佳实践"
+    - name: "DeepWiki"
+      url: "https://deepwiki.com/"
+      desc: "DeepSeek 官方文档与知识库，提供 AI 技术文档与最佳实践"
 
 - category: "Learning & Books"
   items:
