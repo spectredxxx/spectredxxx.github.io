@@ -321,6 +321,9 @@
     - name: "OpenAI Academy"
       url: "https://academy.openai.com/"
       desc: "OpenAI 官方学习平台，提供 AI 技术课程与认证培训"
+    - name: "Google Code Wiki"
+      url: "https://codewiki.google/"
+      desc: "Google 开发者代码维基，提供 Google 技术文档与最佳实践"
 
 - category: "Learning & Books"
   items:
