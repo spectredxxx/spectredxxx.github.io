@@ -315,6 +315,9 @@
     - name: "Anthropic Learning"
       url: "https://anthropic.skilljar.com/"
       desc: "Anthropic 官方学习平台，提供 Claude 相关课程与培训资源"
+    - name: "OpenAI Cookbook"
+      url: "https://github.com/openai/openai-cookbook"
+      desc: "OpenAI 官方示例代码库，包含大量 AI 应用实践案例与最佳实践"
 
 - category: "Learning & Books"
   items:
