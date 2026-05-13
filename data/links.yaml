@@ -327,6 +327,9 @@
     - name: "DeepWiki"
       url: "https://deepwiki.com/"
       desc: "DeepSeek 官方文档与知识库，提供 AI 技术文档与最佳实践"
+    - name: "Zread"
+      url: "https://zread.ai/"
+      desc: "AI 驱动的智能阅读平台，提供文档解析与知识管理"
 
 - category: "Learning & Books"
   items:
