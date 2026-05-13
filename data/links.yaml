@@ -318,6 +318,9 @@
     - name: "OpenAI Cookbook"
       url: "https://github.com/openai/openai-cookbook"
       desc: "OpenAI 官方示例代码库，包含大量 AI 应用实践案例与最佳实践"
+    - name: "OpenAI Academy"
+      url: "https://academy.openai.com/"
+      desc: "OpenAI 官方学习平台，提供 AI 技术课程与认证培训"
 
 - category: "Learning & Books"
   items:
